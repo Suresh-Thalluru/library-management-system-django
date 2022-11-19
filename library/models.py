@@ -11,7 +11,6 @@ import random
 # relation containg all genre of books
 
 from datetime import date, timedelta, datetime
-from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 
@@ -128,6 +127,7 @@ class Book(models.Model):
     total_copies = models.IntegerField()
     pic = models.ImageField(blank=True, null=True, upload_to='books')
     available_copies = models.IntegerField(name='available_copies')
+    
 
     # __str__ method is used to override default string returnd by an object
     def __str__(self):
